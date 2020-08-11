@@ -8,5 +8,5 @@ See README.txt for details.
 
 - Cattaneo, Jansson and Nagasawa (2020): [Bootstrap-Based Inference for Cube Root Asymptotics](https://cattaneo.princeton.edu/papers/Cattaneo-Jansson-Nagasawa_2020_ECMA.pdf).<br>
 _Econometrica_, forthcoming.<br>
-[Supplemental](https://cattaneo.princeton.edu/papers/Cattaneo-Jansson-Nagasawa_2020_ECMA--Supplement.pdf)
-
+[Supplemental](https://cattaneo.princeton.edu/papers/Cattaneo-Jansson-Nagasawa_2020_ECMA--Supplement.pdf)<br>
+DOI: 
