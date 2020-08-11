@@ -1,6 +1,8 @@
 # Replication: Cattaneo, Jansson and Nagasawa (2020)
 
-Replication files for simulations. See README.txt for details.
+Replication files for simulations.
+
+See README.txt for details.
 
 ## Reference
 
