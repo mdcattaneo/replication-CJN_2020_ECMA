@@ -1,12 +1,12 @@
-# Replication: Cattaneo, Jansson and Nagasawa (2020)
+# Replication: Cattaneo, Galiani, Gertler, Martinez and Titiunik (2009)
 
-Replication files for simulations.
+Replication files for empirical results.
 
-See README.txt for details.
+See README.pdf for details.
 
 ## Reference
 
-- Cattaneo, Jansson and Nagasawa (2020): [Bootstrap-Based Inference for Cube Root Asymptotics](https://cattaneo.princeton.edu/papers/Cattaneo-Jansson-Nagasawa_2020_ECMA.pdf).<br>
-_Econometrica_, forthcoming.<br>
-[Supplemental](https://cattaneo.princeton.edu/papers/Cattaneo-Jansson-Nagasawa_2020_ECMA--Supplement.pdf)
+- Cattaneo, Galiani, Gertler, Martinez and Titiunik (2009): [Housing, Health and Happiness](https://cattaneo.princeton.edu/papers/Cattaneo-Galiani-Gertler-Martinez-Titiunik_2009_AEJ-Policy.pdf).<br>
+_American Economic Journal: Economic Policy_, 1(1): 75-105.<br>
+DOI: [10.1257/pol.1.1.75](http://www.doi.org/10.1257/pol.1.1.75)
 
