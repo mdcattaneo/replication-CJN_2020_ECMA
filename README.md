@@ -6,7 +6,7 @@ See [README.txt](README.txt) for details.
 
 ## Reference
 
-Cattaneo, Jansson and Nagasawa (2020): [Bootstrap-Based Inference for Cube Root Asymptotics](https://cattaneo.princeton.edu/papers/Cattaneo-Jansson-Nagasawa_2020_ECMA.pdf). [Erratum](CJN_2020_ECMA--Simulations.pdf)<br>
+Cattaneo, Jansson and Nagasawa (2020): [Bootstrap-Based Inference for Cube Root Asymptotics](https://cattaneo.princeton.edu/papers/Cattaneo-Jansson-Nagasawa_2020_ECMA.pdf). [Erratum](CJN_2020_ECMA--Simulations.pdf).<br>
 _Econometrica_ 88(5): 2203-2219.<br>
 [Supplemental](https://cattaneo.princeton.edu/papers/Cattaneo-Jansson-Nagasawa_2020_ECMA--Supplement.pdf)<br>
 DOI: [10.3982/ECTA17950](https://doi.org/10.3982/ECTA17950)
