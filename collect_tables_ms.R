@@ -2,24 +2,26 @@
 ##  Bootstrapping Maximum Score Estimator
 ##  Cattaneo Jansson Nagasawa
 ##  Apr-24-2017
-##  This version: May-10-202
+##  This version: Mar-28-2023
+##   correcting the scale of m out of n bootstrap
 ##  Constructing tables
 #############################################
 rm(list=ls())
 library(Hmisc)
 
 models <- 1:3
-
+n <- 1000
+ms <- c( ceiling(n^(1/2) ), ceiling(n^(2/3) ), ceiling(n^(4/5) )  )
 beta0 <- 1
 
 out <- matrix(NA, nrow = 10, ncol = 3*3) #ncol is average bandwidth, coverage probability, ave CI length x 3 DGPs
-
+scale  <- rep( c(1,(ms/n)^(1/3),rep(1,6) ), 2000)
 for (m in models){
     results <- read.table( paste0("output/N_ms_m",m,".txt") )
     
     ## lower and upper ends of CI
-    ci.low <- results[,"bhat"] - results[,"q.975"]
-    ci.upp <- results[,"bhat"] - results[,"q.025"]
+    ci.low <- results[,"bhat"] - results[,"q.975"]*scale
+    ci.upp <- results[,"bhat"] - results[,"q.025"]*scale
     ## Whether CI contains the true parameter value
     test.tmp <- ( ci.low <= beta0) & ( beta0 <= ci.upp )
     ## Length of CI
@@ -34,18 +36,18 @@ for (m in models){
 }    
 
     
-output <- latex(round(out,3), file = "table_maxscore.txt",
-                   append=FALSE, table.env=FALSE, center="none", title="",
-                   n.cgroup=c(3, 3, 3),
-                   cgroup=c("DGP 1", "DGP 2", "DGP 3"),
-                   colheads= rep( c("$h,\\epsilon$","Coverage", "Length"),3 ),
-                   n.rgroup = c(1,3,3,3),
-                   rgroup = c("Standard","m-out-of-n","Plug-in: $\\tilde{\\mathbf{H}}^{\\mathtt{MS}}_n$", 
-                              "Num Deriv: $\\tilde{\\mathbf{H}}^{\\mathtt{ND}}_n$"),
-                   rowname=c("", "$m = \\lceil n^{1/2} \\rceil$", "$m = \\lceil n^{2/3} \\rceil$",
-                             "$m = \\lceil n^{4/5} \\rceil$", 
-                             "$h_{ \\mathtt{MSE} } $","$h_{\\mathtt{AMSE} }$", "$\\hat{h}_{\\mathtt{AMSE} }$", 
-                             "$\\epsilon_{ \\mathtt{MSE} } $", "$\\epsilon_{\\mathtt{AMSE} }$", "$\\hat{\\epsilon}_{\\mathtt{AMSE} }$") )
-    
 
+    
+output <- latex(round(out,3), file = "table_maxscore.txt",
+                append=FALSE, table.env=FALSE, center="none", title="",
+                n.cgroup=c(3, 3, 3),
+                cgroup=c("DGP 1", "DGP 2", "DGP 3"),
+                colheads= rep( c("$h,\\epsilon$","Coverage", "Length"),3 ),
+                n.rgroup = c(1,3,3,3),
+                rgroup = c("Standard","m-out-of-n","Plug-in: $\\tilde{\\mathbf{H}}^{\\mathtt{MS}}_n$", 
+                           "Num Deriv: $\\tilde{\\mathbf{H}}^{\\mathtt{ND}}_n$"),
+                rowname=c("", "$m = \\lceil n^{1/2} \\rceil$", "$m = \\lceil n^{2/3} \\rceil$",
+                          "$m = \\lceil n^{4/5} \\rceil$", 
+                          "$h_{ \\mathtt{MSE} } $","$h_{\\mathtt{AMSE} }$", "$\\hat{h}_{\\mathtt{AMSE} }$", 
+                          "$\\epsilon_{ \\mathtt{MSE} } $", "$\\epsilon_{\\mathtt{AMSE} }$", "$\\hat{\\epsilon}_{\\mathtt{AMSE} }$") )
 

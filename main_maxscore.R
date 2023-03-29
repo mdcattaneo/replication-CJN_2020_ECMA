@@ -2,7 +2,7 @@
 ##  Bootstrapping Maximum Score Estimator
 ##  Cattaneo Jansson Nagasawa
 ##  Apr-24-2017
-##  This version: June-3-2020
+##  This version: Mar-28-2020
 ##  Main File
 #############################################
 source("main_function_maxscore.R")

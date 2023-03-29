@@ -1,4 +1,4 @@
-%latex.default(round(out, 3), file = "table_maxscore.txt", append = FALSE,     table.env = FALSE, center = "none", title = "", n.cgroup = c(3,         3, 3), cgroup = c("DGP 1", "DGP 2", "DGP 3"), colheads = rep(c("$h,\\epsilon$",         "Coverage", "Length"), 3), n.rgroup = c(1, 3, 3, 3),     rgroup = c("Standard", "m-out-of-n", "Plug-in: $\\tilde{\\mathbf{V}}^{\\mathtt{MS}}_n$",         "Num Deriv: $\\tilde{\\mathbf{V}}^{\\mathtt{ND}}_n$"),     rowname = c("", "$m = \\lceil n^{1/2} \\rceil$", "$m = \\lceil n^{2/3} \\rceil$",         "$m = \\lceil n^{4/5} \\rceil$", "$h_{ \\mathtt{MSE} } $",         "$h_{\\mathtt{AMSE} }$", "$\\hat{h}_{\\mathtt{AMSE} }$",         "$\\epsilon_{ \\mathtt{MSE} } $", "$\\epsilon_{\\mathtt{AMSE} }$",         "$\\hat{\\epsilon}_{\\mathtt{AMSE} }$"))%
+%latex.default(round(out, 3), file = "table_maxscore_correction.txt",     append = FALSE, table.env = FALSE, center = "none", title = "",     n.cgroup = c(3, 3, 3), cgroup = c("DGP 1", "DGP 2", "DGP 3"),     colheads = rep(c("$h,\\epsilon$", "Coverage", "Length"),         3), n.rgroup = c(1, 3, 3, 3), rgroup = c("Standard",         "m-out-of-n", "Plug-in: $\\tilde{\\mathbf{H}}^{\\mathtt{MS}}_n$",         "Num Deriv: $\\tilde{\\mathbf{H}}^{\\mathtt{ND}}_n$"),     rowname = c("", "$m = \\lceil n^{1/2} \\rceil$", "$m = \\lceil n^{2/3} \\rceil$",         "$m = \\lceil n^{4/5} \\rceil$", "$h_{ \\mathtt{MSE} } $",         "$h_{\\mathtt{AMSE} }$", "$\\hat{h}_{\\mathtt{AMSE} }$",         "$\\epsilon_{ \\mathtt{MSE} } $", "$\\epsilon_{\\mathtt{AMSE} }$",         "$\\hat{\\epsilon}_{\\mathtt{AMSE} }$"))%
 \begin{tabular}{lrrrcrrrcrrr}
 \hline\hline
 \multicolumn{1}{l}{\bfseries }&\multicolumn{3}{c}{\bfseries DGP 1}&\multicolumn{1}{c}{\bfseries }&\multicolumn{3}{c}{\bfseries DGP 2}&\multicolumn{1}{c}{\bfseries }&\multicolumn{3}{c}{\bfseries DGP 3}\tabularnewline
@@ -6,21 +6,21 @@
 \multicolumn{1}{l}{}&\multicolumn{1}{c}{$h,\epsilon$}&\multicolumn{1}{c}{Coverage}&\multicolumn{1}{c}{Length}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{$h,\epsilon$}&\multicolumn{1}{c}{Coverage}&\multicolumn{1}{c}{Length}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{$h,\epsilon$}&\multicolumn{1}{c}{Coverage}&\multicolumn{1}{c}{Length}\tabularnewline
 \hline
 {\bfseries Standard}&&&&&&&&&&&\tabularnewline
-~~&$$&$0.625$&$0.472$&&$$&$0.647$&$0.475$&&$$&$0.654$&$0.243$\tabularnewline
+~~&$$&$0.625$&$0.472$&&$$&$0.651$&$0.477$&&$$&$0.656$&$0.242$\tabularnewline
 \hline
 {\bfseries m-out-of-n}&&&&&&&&&&&\tabularnewline
-~~$m = \lceil n^{1/2} \rceil$&$$&$0.997$&$1.698$&&$$&$0.998$&$1.753$&&$$&$1.000$&$1.890$\tabularnewline
-~~$m = \lceil n^{2/3} \rceil$&$$&$0.978$&$1.185$&&$$&$0.983$&$1.221$&&$$&$0.989$&$0.724$\tabularnewline
-~~$m = \lceil n^{4/5} \rceil$&$$&$0.899$&$0.820$&&$$&$0.897$&$0.837$&&$$&$0.930$&$0.447$\tabularnewline
+~~$m = \lceil n^{1/2} \rceil$&$$&$0.888$&$0.539$&&$$&$0.898$&$0.558$&&$$&$0.981$&$0.600$\tabularnewline
+~~$m = \lceil n^{2/3} \rceil$&$$&$0.844$&$0.550$&&$$&$0.858$&$0.569$&&$$&$0.924$&$0.336$\tabularnewline
+~~$m = \lceil n^{4/5} \rceil$&$$&$0.785$&$0.518$&&$$&$0.792$&$0.530$&&$$&$0.822$&$0.281$\tabularnewline
 \hline
 {\bfseries Plug-in: $\tilde{\mathbf{H}}^{\mathtt{MS}}_n$}&&&&&&&&&&&\tabularnewline
-~~$h_{ \mathtt{MSE} } $&$0.620$&$0.954$&$0.511$&&$0.580$&$0.957$&$0.523$&&$0.150$&$0.962$&$0.277$\tabularnewline
-~~$h_{\mathtt{AMSE} }$&$1.108$&$0.972$&$0.590$&&$0.480$&$0.951$&$0.518$&&$0.123$&$0.942$&$0.263$\tabularnewline
-~~$\hat{h}_{\mathtt{AMSE} }$&$0.443$&$0.940$&$0.508$&&$0.409$&$0.946$&$0.518$&&$0.155$&$0.957$&$0.278$\tabularnewline
+~~$h_{ \mathtt{MSE} } $&$0.620$&$0.954$&$0.511$&&$0.580$&$0.960$&$0.524$&&$0.150$&$0.962$&$0.277$\tabularnewline
+~~$h_{\mathtt{AMSE} }$&$1.108$&$0.972$&$0.590$&&$0.480$&$0.953$&$0.518$&&$0.123$&$0.942$&$0.263$\tabularnewline
+~~$\hat{h}_{\mathtt{AMSE} }$&$0.443$&$0.940$&$0.508$&&$0.409$&$0.947$&$0.518$&&$0.154$&$0.956$&$0.278$\tabularnewline
 \hline
 {\bfseries Num Deriv: $\tilde{\mathbf{H}}^{\mathtt{ND}}_n$}&&&&&&&&&&&\tabularnewline
-~~$\epsilon_{ \mathtt{MSE} } $&$1.400$&$0.936$&$0.483$&&$1.360$&$0.938$&$0.485$&&$0.290$&$0.939$&$0.249$\tabularnewline
-~~$\epsilon_{\mathtt{AMSE} }$&$0.537$&$0.880$&$0.414$&&$0.573$&$0.894$&$0.426$&&$0.224$&$0.902$&$0.227$\tabularnewline
-~~$\hat{\epsilon}_{\mathtt{AMSE} }$&$0.518$&$0.876$&$0.413$&&$0.512$&$0.882$&$0.420$&&$0.369$&$0.947$&$0.270$\tabularnewline
+~~$\epsilon_{ \mathtt{MSE} } $&$1.400$&$0.936$&$0.483$&&$1.360$&$0.940$&$0.486$&&$0.290$&$0.940$&$0.249$\tabularnewline
+~~$\epsilon_{\mathtt{AMSE} }$&$0.537$&$0.880$&$0.414$&&$0.573$&$0.898$&$0.426$&&$0.224$&$0.904$&$0.227$\tabularnewline
+~~$\hat{\epsilon}_{\mathtt{AMSE} }$&$0.518$&$0.876$&$0.413$&&$0.512$&$0.886$&$0.421$&&$0.367$&$0.948$&$0.270$\tabularnewline
 \hline
 \end{tabular}
